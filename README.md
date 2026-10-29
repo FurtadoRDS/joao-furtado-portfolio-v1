@@ -39,7 +39,7 @@ O comando de build já executa a verificação de tipos e gera os arquivos está
 ```text
 public/
   favicon.svg
-  images/joao-furtado.png
+  images/joao-furtado-theme.webp
 src/
   components/
     ContactChannels.tsx
@@ -58,7 +58,7 @@ O conteúdo confirmado fica em `src/content/profile.ts`. A seção de projetos u
 
 O texto apresenta a formação de João em Sistemas de Informação e sua experiência em suporte de TI no Grupo Rio Mais, incluindo acompanhamento de chamados no Auvo. Não atribui experiência profissional em desenvolvimento a esse trabalho de suporte.
 
-O retrato é uma foto real de João, usada provisoriamente nesta primeira composição. As fontes Bebas Neue, DM Sans e IBM Plex Mono são servidas localmente por meio dos pacotes Fontsource; suas licenças acompanham os respectivos pacotes.
+O retrato parte de uma foto real de João, com edição do fundo para acompanhar a identidade visual do portfólio. A versão em cores usa um fundo escuro com destaque vermelho; a foto original permanece preservada em `public/images/joao-furtado.png`. As fontes Bebas Neue, DM Sans e IBM Plex Mono são servidas localmente por meio dos pacotes Fontsource; suas licenças acompanham os respectivos pacotes.
 
 O link de e-mail usa `mailto:` para abrir o aplicativo de e-mail do visitante; a pessoa revisa e envia a mensagem por lá. Os links de telefone e WhatsApp abrem os aplicativos correspondentes. Esses contatos não exigem backend. O feedback de cópia só aparece depois de a área de transferência confirmar a operação; se o navegador bloquear a cópia, os dados continuam disponíveis para seleção manual.
 

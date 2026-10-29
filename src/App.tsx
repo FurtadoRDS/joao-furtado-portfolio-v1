@@ -79,7 +79,7 @@ function App() {
                 portraitRef.current?.style.setProperty('--portrait-y', '0px');
               }}>
                 <div className="portrait-orbit" aria-hidden="true" />
-                <div className="portrait-image"><img src="/images/joao-furtado.png" alt="Retrato de João Furtado" width="630" height="630" fetchPriority="high" /></div>
+                <div className="portrait-image"><img src="/images/joao-furtado-theme.webp" alt="Retrato de João Furtado" width="1254" height="1254" fetchPriority="high" /></div>
                 <div className="portrait-label"><span className="status-dot" /> CURIOSIDADE EM CONSTRUÇÃO</div>
                 <Star className="portrait-star" />
               </div>
