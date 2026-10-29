@@ -113,9 +113,18 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
 .project-name { font-family: var(--font-display); font-size: clamp(58px, 7vw, 96px); line-height: .9; }
 .project-name > span { color: var(--color-accent); }
 .project-card { display: flex; flex-direction: column; gap: 22px; border-top: 1px solid var(--color-rule); padding-top: 24px; }
-.project-card img { width: 100%; aspect-ratio: 1.6; object-fit: cover; }
+.project-card img { width: 100%; height: auto; }
 .project-card h3 { font-family: var(--font-display); font-size: 46px; line-height: 1; }
 .project-card p { font-size: 14px; color: var(--color-muted); line-height: 1.7; }
+.project-card-featured { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 42px; align-items: start; padding-top: 32px; }
+.project-preview { min-width: 0; overflow: hidden; border: 1px solid var(--color-rule); background: #111315; }
+.project-preview figcaption { padding: 12px 16px; border-top: 1px solid var(--color-rule); color: var(--color-muted); font: 9px/1.7 var(--font-mono); }
+.project-details { min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.project-card .project-status { display: flex; align-items: center; gap: 10px; color: var(--color-accent); font: 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.project-card .project-note { border-left: 2px solid var(--color-accent); padding-left: 16px; font-size: 12px; }
+.project-links { display: flex; flex-wrap: wrap; column-gap: 28px; row-gap: 8px; font-size: 12px; }
+.project-links a { min-height: 44px; }
+.project-card .project-demo-hint { font-size: 11px; }
 .text-link { display: inline-flex; gap: 14px; align-items: center; }
 .text-link:hover { color: var(--color-accent); }
 .text-link svg { width: 17px; height: 17px; }
@@ -154,6 +163,7 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
   .contact-layout { grid-template-columns: 1.4fr 1fr; }
 }
 @media (max-width: 767px) {
+  .project-card-featured { grid-template-columns: 1fr; gap: 28px; }
   .site-container { width: min(100% - 40px, 620px); }
   .site-header .site-container { height: 70px; }
   .brand > span:first-child { font-size: 35px; }

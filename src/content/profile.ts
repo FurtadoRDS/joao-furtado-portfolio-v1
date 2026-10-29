@@ -46,9 +46,13 @@ export interface Project {
   summary: string;
   role: string;
   technologies: string[];
+  status?: string;
+  note?: string;
   screenshot?: string;
+  screenshotAlt?: string;
   repository?: string;
   demo?: string;
+  demoHint?: string;
 }
 
 export const profile: Profile = {
@@ -94,7 +98,7 @@ export const profile: Profile = {
   },
   currentProject: {
     name: 'Contract Guardian',
-    status: 'Em desenvolvimento',
+    status: 'Front-end concluído',
   },
   contact: {
     email: 'joaogpfurtado@gmail.com',
@@ -106,4 +110,20 @@ export const profile: Profile = {
   },
 };
 
-export const projects: Project[] = [];
+export const projects: Project[] = [
+  {
+    title: 'Contract Guardian',
+    status: 'Front-end concluído',
+    summary:
+      'Interface para organizar e acompanhar contratos corporativos. Reúne uma dashboard com indicadores da carteira, cadastro e edição de contratos, busca e filtros, calendário de vencimentos, relatórios e exportação em CSV.',
+    role: 'Desenvolvimento do front-end.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    note:
+      'Esta entrega contempla somente o front-end. A demonstração usa dados locais no navegador; backend, autenticação real e análise automática de documentos ainda não estão integrados.',
+    screenshot: '/images/projects/contract-guardian-dashboard.jpg',
+    screenshotAlt: 'Dashboard do Contract Guardian com indicadores, custos e saúde dos contratos, na prévia sem contratos cadastrados.',
+    repository: 'https://github.com/FurtadoRDS/contract-guardian',
+    demo: 'https://contract-guardian-frontend.vercel.app/',
+    demoHint: 'Na tela inicial da demonstração, escolha “Visualizar como master” ou “Visualizar como reader”.',
+  },
+];

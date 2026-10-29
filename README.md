@@ -8,10 +8,10 @@ Portfólio pessoal de João Furtado, com foco em oportunidades de desenvolviment
 - Apresentação, formação e experiência profissional com informações reais.
 - Animações de entrada e interações que respeitam a preferência de reduzir movimento.
 - Navegação para desktop e celular, acordeão de experiência e suporte a teclado.
-- Seção preparada para receber projetos posteriormente.
+- Projetos com briefing, tecnologias, captura da interface e links de código e demonstração.
 - Contato por e-mail, telefone, WhatsApp e GitHub, com cópia dos dados.
 
-O **Contract Guardian** aparece somente como projeto em desenvolvimento. Seus detalhes serão adicionados em outra etapa. A composição “CG” é uma arte tipográfica, não uma captura da aplicação.
+O **Contract Guardian** apresenta o front-end concluído de uma interface para gestão de contratos, com captura real da dashboard e links para o repositório e a demonstração. A prévia usa dados locais no navegador; backend, autenticação real e análise automática de documentos ainda não estão integrados.
 
 ## Executar localmente
 
@@ -62,4 +62,4 @@ O retrato é uma foto real de João, usada provisoriamente nesta primeira compos
 
 O link de e-mail usa `mailto:` para abrir o aplicativo de e-mail do visitante; a pessoa revisa e envia a mensagem por lá. Os links de telefone e WhatsApp abrem os aplicativos correspondentes. Esses contatos não exigem backend. O feedback de cópia só aparece depois de a área de transferência confirmar a operação; se o navegador bloquear a cópia, os dados continuam disponíveis para seleção manual.
 
-Currículo e detalhes dos projetos serão adicionados quando seus dados e materiais estiverem definidos.
+Currículo e novos projetos serão adicionados quando seus dados e materiais estiverem definidos.
