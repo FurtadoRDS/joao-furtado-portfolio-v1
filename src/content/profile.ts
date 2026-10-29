@@ -31,6 +31,11 @@ export interface Profile {
   education: Education;
   experience: Experience;
   currentProject: CurrentProject;
+  contact: {
+    email: string;
+    phone: string;
+    phoneDisplay: string;
+  };
   links: {
     github: string;
   };
@@ -90,6 +95,11 @@ export const profile: Profile = {
   currentProject: {
     name: 'Contract Guardian',
     status: 'Em desenvolvimento',
+  },
+  contact: {
+    email: 'joaogpfurtado@gmail.com',
+    phone: '+5522974024337',
+    phoneDisplay: '+55 (22) 97402-4337',
   },
   links: {
     github: 'https://github.com/FurtadoRDS',

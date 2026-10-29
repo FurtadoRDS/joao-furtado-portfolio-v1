@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { profile } from './content/profile';
 import { Arrow, Star } from './components/Icons';
 import { Projects } from './components/Projects';
+import { ContactChannels } from './components/ContactChannels';
 import { useReveal } from './hooks/useReveal';
 
 const navigation = [
@@ -134,7 +135,7 @@ function App() {
             <p className="eyebrow" data-reveal><span>04</span> O próximo passo</p>
             <div className="contact-layout" data-reveal>
               <h2 id="contact-title">VAMOS<br /><em>CONVERSAR</em><span>?</span></h2>
-              <div className="contact-copy"><Star className="text-accent" /><p>Busco uma oportunidade em desenvolvimento para contribuir, escrever código e aprender com novos desafios.</p><a className="primary-link" href={profile.links.github} target="_blank" rel="noreferrer"><span>Me encontre no GitHub</span><Arrow diagonal /></a></div>
+              <div className="contact-copy"><Star className="text-accent" /><p>Busco uma oportunidade em desenvolvimento para contribuir, escrever código e aprender com novos desafios.</p><ContactChannels /></div>
             </div>
           </div>
         </section>

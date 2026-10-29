@@ -124,9 +124,19 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
 .contact-layout h2 { font-family: var(--font-display); font-size: clamp(74px, 10.8vw, 156px); line-height: .86; letter-spacing: -.02em; }
 .contact-layout h2 em { font-style: normal; color: transparent; -webkit-text-stroke: 1px var(--color-ink); }
 .contact-layout h2 > span { color: var(--color-accent); }
-.contact-copy { max-width: 295px; justify-self: end; }
+.contact-copy { width: 100%; min-width: 0; max-width: 380px; justify-self: end; }
 .contact-copy > svg { width: 35px; height: 35px; margin-bottom: 30px; }
 .contact-copy p { color: var(--color-muted); font-size: 14px; line-height: 1.8; }
+.contact-channels { margin-top: 28px; }
+.contact-channel { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 12px; row-gap: 3px; border-top: 1px solid var(--color-rule); padding-block: 17px; min-width: 0; }
+.contact-channel-label { grid-column: 1 / -1; display: block; font-family: var(--font-mono); color: var(--color-muted); font-size: 9px; letter-spacing: .07em; text-transform: uppercase; }
+.contact-channel-value { min-width: 0; display: inline-block; font-size: clamp(13px, 1.2vw, 16px); line-height: 1.6; color: var(--color-ink); overflow-wrap: anywhere; transition: color .2s; }
+.contact-channel-value:hover { color: var(--color-accent); }
+.contact-copy-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex-shrink: 0; min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid var(--color-rule); color: var(--color-muted); font-size: 10px; transition: border-color .2s, color .2s; }
+.contact-copy-button:hover { border-color: var(--color-accent); color: var(--color-ink); }
+.contact-copy-button svg { width: 15px; height: 15px; }
+.contact-actions { display: flex; flex-wrap: wrap; align-items: center; column-gap: 26px; row-gap: 14px; border-top: 1px solid var(--color-rule); padding-top: 20px; font-size: 12px; }
+.contact-feedback { min-height: 40px; padding-top: 12px; font-size: 11px !important; }
 [data-reveal][data-animate=true] { opacity: 0; transform: translateY(28px); transition: opacity .7s, transform .7s cubic-bezier(.16,1,.3,1); }
 [data-reveal][data-visible=true] { opacity: 1; transform: none; }
 @keyframes enter-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
@@ -179,6 +189,11 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
   .contact-layout h2 { font-size: clamp(66px, 16.8vw, 125px); }
   .contact-copy { justify-self: start; max-width: 360px; }
   .contact-copy > svg { display: none; }
+}
+@media (max-width: 360px) {
+  .contact-layout h2 { font-size: 56px; }
+  .contact-channel-value { font-size: 13px; }
+  .contact-channel { gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

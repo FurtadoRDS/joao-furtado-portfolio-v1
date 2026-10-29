@@ -9,7 +9,7 @@ Portfólio pessoal de João Furtado, com foco em oportunidades de desenvolviment
 - Animações de entrada e interações que respeitam a preferência de reduzir movimento.
 - Navegação para desktop e celular, acordeão de experiência e suporte a teclado.
 - Seção preparada para receber projetos posteriormente.
-- Contato pelo perfil público do GitHub.
+- Contato por e-mail, telefone, WhatsApp e GitHub, com cópia dos dados.
 
 O **Contract Guardian** aparece somente como projeto em desenvolvimento. Seus detalhes serão adicionados em outra etapa. A composição “CG” é uma arte tipográfica, não uma captura da aplicação.
 
@@ -42,6 +42,7 @@ public/
   images/joao-furtado.png
 src/
   components/
+    ContactChannels.tsx
     Icons.tsx
     Projects.tsx
   content/profile.ts
@@ -59,4 +60,6 @@ O texto apresenta a formação de João em Sistemas de Informação e sua experi
 
 O retrato é uma foto real de João, usada provisoriamente nesta primeira composição. As fontes Bebas Neue, DM Sans e IBM Plex Mono são servidas localmente por meio dos pacotes Fontsource; suas licenças acompanham os respectivos pacotes.
 
-Não há formulário com envio simulado. Outros canais de contato, currículo e projetos serão adicionados quando seus dados e materiais estiverem definidos.
+O link de e-mail usa `mailto:` para abrir o aplicativo de e-mail do visitante; a pessoa revisa e envia a mensagem por lá. Os links de telefone e WhatsApp abrem os aplicativos correspondentes. Esses contatos não exigem backend. O feedback de cópia só aparece depois de a área de transferência confirmar a operação; se o navegador bloquear a cópia, os dados continuam disponíveis para seleção manual.
+
+Currículo e detalhes dos projetos serão adicionados quando seus dados e materiais estiverem definidos.
