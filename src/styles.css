@@ -123,8 +123,7 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
 .project-preview::after { right: -1px; bottom: -1px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); }
 .project-preview-screen { aspect-ratio: 16 / 9; overflow: hidden; box-shadow: 0 0 0 1px var(--color-rule); background: #101113; }
 .project-preview-screen img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.project-preview figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 14px; color: var(--color-muted); font: 9px/1.7 var(--font-mono); }
-.project-preview figcaption > span:last-child { color: var(--color-accent); }
+.project-preview figcaption { padding-top: 14px; color: var(--color-muted); font: 9px/1.7 var(--font-mono); }
 .project-details { min-width: 0; display: flex; flex-direction: column; gap: 20px; }
 .project-card .project-status { display: flex; align-items: center; gap: 10px; color: var(--color-accent); font: 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
 .project-card .project-note { border-left: 2px solid var(--color-accent); padding-left: 16px; font-size: 12px; }

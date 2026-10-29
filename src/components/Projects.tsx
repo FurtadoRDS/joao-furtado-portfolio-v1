@@ -19,7 +19,7 @@ export function Projects() {
                     <div className="project-preview-screen">
                       <img src={project.screenshot} alt={project.screenshotAlt ?? `Interface de ${project.title}`} loading="lazy" width="1600" height="900" />
                     </div>
-                    <figcaption><span>Dashboard · prévia da interface</span><span aria-hidden="true">16:9</span></figcaption>
+                    <figcaption>Dashboard · prévia da interface</figcaption>
                   </figure>
                 )}
                 <div className="project-details">
