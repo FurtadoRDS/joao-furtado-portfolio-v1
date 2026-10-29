@@ -16,8 +16,10 @@ export function Projects() {
               <article key={project.title} className={`project-card${projects.length === 1 ? ' project-card-featured' : ''}`} data-reveal>
                 {project.screenshot && (
                   <figure className="project-preview">
-                    <img src={project.screenshot} alt={project.screenshotAlt ?? `Interface de ${project.title}`} loading="lazy" width="1086" height="872" />
-                    <figcaption>Captura real da dashboard · prévia da interface</figcaption>
+                    <div className="project-preview-screen">
+                      <img src={project.screenshot} alt={project.screenshotAlt ?? `Interface de ${project.title}`} loading="lazy" width="1600" height="900" />
+                    </div>
+                    <figcaption><span>Dashboard · prévia da interface</span><span aria-hidden="true">16:9</span></figcaption>
                   </figure>
                 )}
                 <div className="project-details">

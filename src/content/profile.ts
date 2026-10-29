@@ -120,7 +120,7 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     note:
       'Esta entrega contempla somente o front-end. A demonstração usa dados locais no navegador; backend, autenticação real e análise automática de documentos ainda não estão integrados.',
-    screenshot: '/images/projects/contract-guardian-dashboard.jpg',
+    screenshot: '/images/projects/contract-guardian-dashboard-wide.jpg',
     screenshotAlt: 'Dashboard do Contract Guardian com indicadores, custos e saúde dos contratos, na prévia sem contratos cadastrados.',
     repository: 'https://github.com/FurtadoRDS/contract-guardian',
     demo: 'https://contract-guardian-frontend.vercel.app/',
