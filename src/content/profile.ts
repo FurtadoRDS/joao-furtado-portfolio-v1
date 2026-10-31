@@ -50,6 +50,7 @@ export interface Project {
   note?: string;
   screenshot?: string;
   screenshotAlt?: string;
+  screenshotCaption?: string;
   repository?: string;
   demo?: string;
   demoHint?: string;
@@ -111,6 +112,20 @@ export const profile: Profile = {
 };
 
 export const projects: Project[] = [
+  {
+    title: 'FechaFolha',
+    status: 'Aplicação web · armazenamento local',
+    summary:
+      'Aplicação para organizar o fechamento de salários e comissões de múltiplas lojas. Permite cadastrar funcionários, calcular comissões fixas ou percentuais, consultar os totais da rede e exportar relatórios Excel em formatos para celular e computador.',
+    role: 'Desenvolvimento da aplicação web.',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'xlsx-js-style'],
+    note:
+      'A aplicação armazena os dados localmente no navegador, sem sincronização entre dispositivos. O escopo é o fechamento de salários base e comissões.',
+    screenshot: '/images/projects/fechafolha-dashboard.jpg',
+    screenshotAlt: 'Interface do FechaFolha com uma loja e funcionários fictícios, indicadores de vendas, salários e comissões.',
+    screenshotCaption: 'Fechamento por loja · dados fictícios',
+    repository: 'https://github.com/FurtadoRDS/fechafolha-agilizador-de-folha',
+  },
   {
     title: 'Contract Guardian',
     status: 'Front-end concluído',

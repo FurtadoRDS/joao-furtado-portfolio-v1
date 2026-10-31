@@ -8,8 +8,10 @@ Portfólio pessoal de João Furtado, com foco em oportunidades de desenvolviment
 - Apresentação, formação e experiência profissional com informações reais.
 - Animações de entrada e interações que respeitam a preferência de reduzir movimento.
 - Navegação para desktop e celular, acordeão de experiência e suporte a teclado.
-- Projetos com briefing, tecnologias, captura da interface e links de código e demonstração.
+- Carrossel de projetos com setas, contador, transição suave e navegação por teclado, preservando o layout de destaque de cada projeto.
 - Contato por e-mail, telefone, WhatsApp e GitHub, com cópia dos dados.
+
+O **FechaFolha** apresenta uma aplicação para fechamento de salários base e comissões de múltiplas lojas, com armazenamento local e exportação Excel para celular e computador. A captura usa dados fictícios e acompanha o link para o código.
 
 O **Contract Guardian** apresenta o front-end concluído de uma interface para gestão de contratos, com captura real da dashboard e links para o repositório e a demonstração. A prévia usa dados locais no navegador; backend, autenticação real e análise automática de documentos ainda não estão integrados.
 

@@ -1,6 +1,8 @@
 # Adicionar projetos
 
-A seção está em `src/components/Projects.tsx`. O array exportado `projects`, em `src/content/profile.ts`, contém os projetos com informações confirmadas para publicação, incluindo o front-end do Contract Guardian.
+A seção está em `src/components/Projects.tsx`. O array exportado `projects`, em `src/content/profile.ts`, contém os projetos com informações confirmadas para publicação: FechaFolha e o front-end do Contract Guardian. A ordem do array define a ordem do carrossel.
+
+Cada projeto mantém o mesmo layout de destaque. As setas navegam circularmente, sem troca automática; as teclas esquerda/direita também funcionam quando o foco está no carrossel. A transição respeita a preferência por movimento reduzido, e os projetos inativos não recebem foco nem são anunciados como conteúdo visível.
 
 O Contract Guardian usa uma captura real da dashboard, descreve as funcionalidades da interface e informa a ausência de integração com o backend. Não presuma funcionalidades adicionais, clientes ou resultados.
 
@@ -16,6 +18,7 @@ O Contract Guardian usa uma captura real da dashboard, descreve as funcionalidad
 | `note` | Não | Limitações relevantes da demonstração. |
 | `screenshot` | Não | Caminho de uma captura real, preferencialmente em `public/images/`. |
 | `screenshotAlt` | Não | Descrição acessível da tela capturada. |
+| `screenshotCaption` | Não | Legenda da captura; use-a para identificar dados fictícios quando necessário. |
 | `repository` | Não | URL do repositório do próprio projeto, quando disponível. |
 | `demo` | Não | URL de uma demonstração funcional, quando disponível. |
 | `demoHint` | Não | Instrução breve para explorar a demonstração. |
