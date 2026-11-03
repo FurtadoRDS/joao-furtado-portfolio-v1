@@ -125,6 +125,7 @@ export const projects: Project[] = [
     screenshotAlt: 'Interface do FechaFolha com uma loja e funcionários fictícios, indicadores de vendas, salários e comissões.',
     screenshotCaption: 'Fechamento por loja · dados fictícios',
     repository: 'https://github.com/FurtadoRDS/fechafolha-agilizador-de-folha',
+    demo: 'https://fechafolha-phi.vercel.app/',
   },
   {
     title: 'Contract Guardian',
