@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { profile } from '../content/profile';
-import { Arrow } from './Icons';
+import { Arrow, Download } from './Icons';
 
 type ContactKind = 'email' | 'phone';
 
@@ -63,8 +63,10 @@ export function ContactChannels() {
       <p className="contact-feedback" role="status" aria-live="polite" aria-atomic="true">{feedback}</p>
 
       <div className="contact-actions">
-        <a className="text-link" href={whatsappHref} target="_blank" rel="noreferrer">WhatsApp <Arrow diagonal /></a>
+        <a className="text-link" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
         <a className="text-link" href={profile.links.github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
+        <a className="text-link" href={whatsappHref} target="_blank" rel="noreferrer">WhatsApp <Arrow diagonal /></a>
+        <a className="text-link" href={profile.links.resume} download>Currículo <Download /></a>
       </div>
     </div>
   );

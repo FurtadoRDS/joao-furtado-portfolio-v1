@@ -39,6 +39,8 @@ export interface Profile {
   };
   links: {
     github: string;
+    linkedin: string;
+    resume: string;
   };
 }
 
@@ -123,6 +125,8 @@ export const profile: Profile = {
   },
   links: {
     github: 'https://github.com/FurtadoRDS',
+    linkedin: 'https://www.linkedin.com/in/joao-guilherme-pereira-furtado',
+    resume: '/curriculo-joao-furtado.pdf',
   },
 };
 

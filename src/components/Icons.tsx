@@ -6,6 +6,14 @@ export function Arrow({ diagonal = false, className = '' }: { diagonal?: boolean
   );
 }
 
+export function Download({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 4v11m-5-5 5 5 5-5M5 20h14" />
+    </svg>
+  );
+}
+
 export function Lock({ className = '' }: { className?: string }) {
   return (
     <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">

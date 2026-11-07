@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { profile } from './content/profile';
-import { Arrow, Star } from './components/Icons';
+import { Arrow, Download, Star } from './components/Icons';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { ContactChannels } from './components/ContactChannels';
@@ -53,9 +53,9 @@ function App() {
             {navigation.map((item) => <a className="nav-link" key={item.href} href={item.href} aria-current={activeSection === item.href ? 'location' : undefined}>{item.label}</a>)}
           </nav>
           <button ref={menuButtonRef} className="menu-button md:hidden" type="button" aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setMenuOpen(!menuOpen)}><span>{menuOpen ? 'Fechar' : 'Menu'}</span><span aria-hidden="true">{menuOpen ? '−' : '+'}</span></button>
-          <a className="header-action hidden lg:inline-flex" href={profile.links.github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
+          <a className="header-action hidden lg:inline-flex" href={profile.links.resume} download>Baixar currículo <Download /></a>
         </div>
-        {menuOpen && <nav id="mobile-menu" className="mobile-menu md:hidden" aria-label="Navegação móvel">{navigation.map((item) => <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<Arrow diagonal /></a>)}</nav>}
+        {menuOpen && <nav id="mobile-menu" className="mobile-menu md:hidden" aria-label="Navegação móvel">{navigation.map((item) => <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<Arrow diagonal /></a>)}<a href={profile.links.resume} download onClick={() => setMenuOpen(false)}>Baixar currículo<Download /></a></nav>}
       </header>
 
       <main id="conteudo">
@@ -69,7 +69,10 @@ function App() {
                 <h1 id="hero-title">JOÃO<br />FURTADO<span>.</span></h1>
                 <p className="hero-role">DESENVOLVIMENTO.<br /><span>VONTADE DE IR ALÉM.</span></p>
                 <p className="hero-summary">Desenvolvo para a web com React, TypeScript e Laravel. Meu próximo passo é um estágio em desenvolvimento, aprendendo com um time.</p>
-                <a className="primary-link" href="#sobre"><span>Conheça minha trajetória</span><Arrow diagonal /></a>
+                <div className="hero-actions">
+                  <a className="primary-link" href="#sobre"><span>Conheça minha trajetória</span><Arrow diagonal /></a>
+                  <a className="hero-resume-link" href={profile.links.resume} download>Baixar currículo <Download /></a>
+                </div>
               </div>
               <div ref={portraitRef} className="portrait-stage" onPointerMove={(event) => {
                 if (event.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
