@@ -52,7 +52,7 @@ export function Projects() {
     <section id="projetos" className="section-border" aria-labelledby="projects-title">
       <div className="site-container py-16 md:py-24">
         <div className="section-heading" data-reveal>
-          <p className="eyebrow"><span>03</span> O que estou construindo</p>
+          <p className="eyebrow"><span>04</span> O que estou construindo</p>
           <h2 id="projects-title" className="section-title">Código em <em>movimento.</em></h2>
         </div>
 

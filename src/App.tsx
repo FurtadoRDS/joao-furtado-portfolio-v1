@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { profile } from './content/profile';
 import { Arrow, Star } from './components/Icons';
 import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
 import { ContactChannels } from './components/ContactChannels';
 import { useReveal } from './hooks/useReveal';
 
 const navigation = [
   { href: '#sobre', label: 'Sobre' },
+  { href: '#conhecimentos', label: 'Conhecimentos' },
   { href: '#experiencia', label: 'Experiência' },
   { href: '#projetos', label: 'Projetos' },
   { href: '#contato', label: 'Contato' },
@@ -105,9 +107,11 @@ function App() {
           </div>
         </section>
 
+        <Skills />
+
         <section id="experiencia" className="section-border experience-section" aria-labelledby="experience-title">
           <div className="site-container py-16 md:py-24">
-            <div className="section-heading" data-reveal><p className="eyebrow"><span>02</span> Experiência profissional</p><h2 id="experience-title" className="section-title">Tecnologia na <em>vida real.</em></h2></div>
+            <div className="section-heading" data-reveal><p className="eyebrow"><span>03</span> Experiência profissional</p><h2 id="experience-title" className="section-title">Tecnologia na <em>vida real.</em></h2></div>
             <div className="experience-grid">
               <div className="experience-intro" data-reveal>
                 <p className="eyebrow text-accent">{profile.experience.period}</p>
@@ -132,7 +136,7 @@ function App() {
 
         <section id="contato" className="contact-section section-border" aria-labelledby="contact-title">
           <div className="site-container relative py-16 md:py-24">
-            <p className="eyebrow" data-reveal><span>04</span> O próximo passo</p>
+            <p className="eyebrow" data-reveal><span>05</span> O próximo passo</p>
             <div className="contact-layout" data-reveal>
               <h2 id="contact-title">VAMOS<br /><em>CONVERSAR</em><span>?</span></h2>
               <div className="contact-copy"><Star className="text-accent" /><p>Busco uma oportunidade em desenvolvimento para contribuir, escrever código e aprender com novos desafios.</p><ContactChannels /></div>

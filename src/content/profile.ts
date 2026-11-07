@@ -42,6 +42,12 @@ export interface Profile {
   };
 }
 
+export interface SkillGroup {
+  title: string;
+  items: string[];
+  usedIn: string;
+}
+
 export interface Project {
   title: string;
   summary: string;
@@ -119,6 +125,42 @@ export const profile: Profile = {
     github: 'https://github.com/FurtadoRDS',
   },
 };
+
+export const skillsSummary =
+  'Uso React e TypeScript em todos os meus projetos. No Contract Guardian, levei esse trabalho ao back-end, com Laravel, PostgreSQL e Docker.';
+
+export const skills: SkillGroup[] = [
+  {
+    title: 'Front-end',
+    items: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Vite'],
+    usedIn: 'Contract Guardian, FechaFolha e este site',
+  },
+  {
+    title: 'Back-end',
+    items: ['PHP', 'Laravel', 'APIs REST'],
+    usedIn: 'Contract Guardian',
+  },
+  {
+    title: 'Banco de dados',
+    items: ['PostgreSQL'],
+    usedIn: 'Contract Guardian',
+  },
+  {
+    title: 'Testes',
+    items: ['Vitest', 'Testing Library', 'PHPUnit'],
+    usedIn: 'Contract Guardian',
+  },
+  {
+    title: 'Ferramentas e DevOps',
+    items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vercel'],
+    usedIn: 'Contract Guardian, FechaFolha e este site',
+  },
+  {
+    title: 'Infraestrutura de TI',
+    items: ['Redes', 'Cabeamento', 'CFTV', 'Help desk'],
+    usedIn: 'Estágio no Grupo Rio Mais',
+  },
+];
 
 export const projects: Project[] = [
   {
