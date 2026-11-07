@@ -151,6 +151,8 @@ svg path { stroke: currentColor; stroke-width: 1.5; }
 .project-links { display: flex; flex-wrap: wrap; column-gap: 28px; row-gap: 8px; font-size: 12px; }
 .project-links a { min-height: 44px; }
 .project-card .project-demo-hint { font-size: 11px; }
+.project-card .project-privacy { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--color-muted); font: 10px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.project-privacy svg { width: 15px; height: 15px; color: var(--color-accent); }
 .project-carousel { min-width: 0; }
 .project-carousel-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 20px; }
 .project-carousel-label { color: var(--color-muted); font: 9px/1.7 var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }

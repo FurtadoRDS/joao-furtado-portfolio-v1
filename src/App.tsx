@@ -120,7 +120,7 @@ function App() {
                 {profile.experience.areas.map((area, index) => (
                   <div className="experience-area" key={area.title}>
                     <h4><button type="button" aria-expanded={activeArea === index} aria-controls={`area-${index}`} onClick={() => setActiveArea(activeArea === index ? null : index)}><span className="area-number">0{index + 1}</span><span>{area.title}</span><span className="area-toggle" aria-hidden="true">{activeArea === index ? '−' : '+'}</span></button></h4>
-                    <div id={`area-${index}`} className={`area-content ${activeArea === index ? 'is-open' : ''}`} aria-hidden={activeArea !== index}><div><p>{area.description}</p>{index === 0 && <span className="tag mt-4 inline-block">Chamados / Auvo</span>}</div></div>
+                    <div id={`area-${index}`} className={`area-content ${activeArea === index ? 'is-open' : ''}`} aria-hidden={activeArea !== index}><div><p>{area.description}</p>{area.tag && <span className="tag mt-4 inline-block">{area.tag}</span>}</div></div>
                   </div>
                 ))}
               </div>
