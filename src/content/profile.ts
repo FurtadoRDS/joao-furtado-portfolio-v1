@@ -1,7 +1,7 @@
 export interface Education {
   course: string;
   institution: string;
-  period: string;
+  graduationYear: string;
 }
 
 export interface ExperienceArea {
@@ -59,17 +59,17 @@ export interface Project {
 export const profile: Profile = {
   name: 'João Furtado',
   fullName: 'João Guilherme Pereira Furtado',
-  headline: 'Meu foco é desenvolver.',
+  headline: 'Desenvolvimento web com React, TypeScript e Laravel.',
   summary:
-    'Sou estudante de Sistemas de Informação e atuo com suporte de TI. Busco uma oportunidade para desenvolver software, com web como meu ponto forte e vontade de aprender em outras áreas.',
+    'Sou estudante de Sistemas de Informação e estagiário de suporte de TI no Grupo Rio Mais, onde também desenvolvo o sistema interno de gestão de contratos da empresa. Busco um estágio em desenvolvimento web para seguir evoluindo com React, TypeScript e Laravel.',
   location: 'Cabo Frio',
   education: {
     course: 'Sistemas de Informação',
     institution: 'Estácio',
-    period: '3º período',
+    graduationYear: '2029',
   },
   experience: {
-    role: 'Suporte de TI',
+    role: 'Estagiário de Suporte de TI',
     company: 'Grupo Rio Mais',
     period: 'Junho de 2026 — atual',
     summary:

@@ -66,7 +66,7 @@ function App() {
                 <p className="hero-greeting">Olá, eu sou</p>
                 <h1 id="hero-title">JOÃO<br />FURTADO<span>.</span></h1>
                 <p className="hero-role">DESENVOLVIMENTO.<br /><span>VONTADE DE IR ALÉM.</span></p>
-                <p className="hero-summary">Meu ponto forte é a web. Meu próximo passo é uma oportunidade para criar software e aprender em diferentes áreas.</p>
+                <p className="hero-summary">Desenvolvo para a web com React, TypeScript e Laravel. Meu próximo passo é um estágio em desenvolvimento, aprendendo com um time.</p>
                 <a className="primary-link" href="#sobre"><span>Conheça minha trajetória</span><Arrow diagonal /></a>
               </div>
               <div ref={portraitRef} className="portrait-stage" onPointerMove={(event) => {
@@ -86,8 +86,8 @@ function App() {
               <aside className="hero-notes" aria-label="Formação e experiência atuais">
                 <Star className="mb-6 text-accent" />
                 <p className="mb-9 text-sm leading-relaxed text-muted">Entre a prática<br />de hoje e o código<br />de amanhã.</p>
-                <div className="hero-note"><strong>3º</strong><span>PERÍODO DE SISTEMAS<br />DE INFORMAÇÃO</span></div>
-                <div className="hero-note"><strong>TI</strong><span>SUPORTE NO<br />GRUPO RIO MAIS</span></div>
+                <div className="hero-note"><strong>{profile.education.graduationYear}</strong><span>FORMATURA PREVISTA EM<br />SISTEMAS DE INFORMAÇÃO</span></div>
+                <div className="hero-note"><strong>TI</strong><span>ESTÁGIO NO<br />GRUPO RIO MAIS</span></div>
               </aside>
             </div>
             <div className="hero-bottom"><span className="mono">JOÃO GUILHERME PEREIRA FURTADO</span><a href="#sobre" className="scroll-link">CONTINUE EXPLORANDO <span aria-hidden="true">↓</span></a></div>
@@ -100,7 +100,7 @@ function App() {
             <div className="flex flex-col justify-between gap-8 md:pt-14" data-reveal>
               <p className="about-lead">Quero construir software.<br /><span className="text-muted">E continuar aprendendo no caminho.</span></p>
               <p className="max-w-lg leading-relaxed text-muted">{profile.summary}</p>
-              <div className="education-row"><span className="education-index">03</span><div><p className="text-sm font-medium">{profile.education.course}</p><p className="mt-1 text-sm text-muted">{profile.education.institution} <span className="text-accent">/</span> {profile.education.period}</p></div><Star className="ml-auto shrink-0 text-accent" /></div>
+              <div className="education-row"><span className="education-index">SI</span><div><p className="text-sm font-medium">{profile.education.course}</p><p className="mt-1 text-sm text-muted">{profile.education.institution} <span className="text-accent">/</span> Formatura prevista em {profile.education.graduationYear}</p></div><Star className="ml-auto shrink-0 text-accent" /></div>
             </div>
           </div>
         </section>
