@@ -1,67 +1,53 @@
-# João Furtado — Portfólio v1
+# João Furtado — Portfólio
 
-Portfólio pessoal de João Furtado, com foco em oportunidades de desenvolvimento e web como ponto de partida. Implementação original em **React, TypeScript e Tailwind CSS**, com Vite.
+Meu portfólio pessoal: quem eu sou, o que eu sei, onde trabalho e o que estou construindo.
 
-## Nesta versão
+**No ar:** [joao-furtado-portfolio-v1.vercel.app](https://joao-furtado-portfolio-v1.vercel.app/) · **LinkedIn:** [joao-guilherme-pereira-furtado](https://www.linkedin.com/in/joao-guilherme-pereira-furtado)
 
-- Identidade visual em preto e vermelho, com tipografia em destaque.
-- Apresentação, formação e experiência profissional com informações reais.
-- Animações de entrada e interações que respeitam a preferência de reduzir movimento.
-- Navegação para desktop e celular, acordeão de experiência e suporte a teclado.
-- Carrossel de projetos com setas, contador, transição suave e navegação por teclado, preservando o layout de destaque de cada projeto.
-- Contato por e-mail, telefone, WhatsApp e GitHub, com cópia dos dados.
+## O site
 
-O **FechaFolha** apresenta uma aplicação para fechamento de salários base e comissões de múltiplas lojas, com armazenamento local e exportação Excel para celular e computador. A captura usa dados fictícios e acompanha o link para o código.
+- Feito com React, TypeScript e Tailwind CSS, usando Vite.
+- Seções: Sobre, Conhecimentos, Experiência, Projetos e Contato.
+- Carrossel de projetos com setas, contador e navegação por teclado.
+- Acessibilidade: link para pular ao conteúdo, suporte a leitores de tela e respeito à preferência de reduzir movimento.
+- Currículo em PDF para baixar, e e-mail e telefone com botão de copiar.
+- Prévia com foto quando o link é compartilhado no WhatsApp ou no LinkedIn.
 
-O **Contract Guardian** apresenta o front-end concluído de uma interface para gestão de contratos, com captura real da dashboard e links para o repositório e a demonstração. A prévia usa dados locais no navegador; backend, autenticação real e análise automática de documentos ainda não estão integrados.
+## Como rodar
 
-## Executar localmente
-
-Requisitos: Node.js **22.12+** ou uma versão LTS posterior e npm.
+Requisitos: Node.js 22.12 ou mais recente.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Abra o endereço local exibido pelo Vite.
-
-## Verificar e gerar a versão de produção
+Para gerar e testar a versão de produção:
 
 ```sh
-npm run typecheck
 npm run build
 npm run preview
 ```
 
-O comando de build já executa a verificação de tipos e gera os arquivos estáticos em `dist/`. A aplicação não exige variáveis de ambiente ou servidor de API. O campo `private` do `package.json` impede publicação acidental no registro npm; ele não define a visibilidade deste repositório no GitHub.
+O `build` já roda a checagem de tipos do TypeScript antes de gerar os arquivos em `dist/`.
 
-## Organização
+## Onde fica o conteúdo
+
+Todo o texto do site está em `src/content/profile.ts`: perfil, experiência, conhecimentos e projetos. Para adicionar um projeto, incluo um item no array `projects`, e a ordem do array é a ordem do carrossel. As capturas de tela ficam em `public/images/projects/` e usam sempre dados fictícios.
+
+## Estrutura
 
 ```text
 public/
-  favicon.svg
-  images/joao-furtado-profile.webp
+  curriculo-joao-furtado.pdf
+  og-image.jpg          imagem da prévia de link
+  images/
 src/
-  components/
-    ContactChannels.tsx
-    Icons.tsx
-    Projects.tsx
-  content/profile.ts
-  hooks/useReveal.ts
+  components/           Projects, Skills, ContactChannels, Icons
+  content/profile.ts    textos e dados do site
+  hooks/useReveal.ts    animação de entrada das seções
   App.tsx
-  main.tsx
   styles.css
 ```
 
-O conteúdo confirmado fica em `src/content/profile.ts`. A seção de projetos usa os tipos e o array `projects` desse arquivo. Veja [como adicionar projetos](docs/PROJETOS.md).
-
-## Conteúdo e materiais
-
-O texto apresenta a formação de João em Sistemas de Informação e sua experiência em suporte de TI no Grupo Rio Mais, incluindo acompanhamento de chamados no Auvo. Não atribui experiência profissional em desenvolvimento a esse trabalho de suporte.
-
-O retrato usa a nova foto fornecida por João, com edição do fundo e tratamento leve de nitidez. A versão em cores acompanha a identidade visual do portfólio com um degradê preto e vermelho. As fontes Bebas Neue, DM Sans e IBM Plex Mono são servidas localmente por meio dos pacotes Fontsource; suas licenças acompanham os respectivos pacotes.
-
-O link de e-mail usa `mailto:` para abrir o aplicativo de e-mail do visitante; a pessoa revisa e envia a mensagem por lá. Os links de telefone e WhatsApp abrem os aplicativos correspondentes. Esses contatos não exigem backend. O feedback de cópia só aparece depois de a área de transferência confirmar a operação; se o navegador bloquear a cópia, os dados continuam disponíveis para seleção manual.
-
-Currículo e novos projetos serão adicionados quando seus dados e materiais estiverem definidos.
+As fontes Bebas Neue, DM Sans e IBM Plex Mono são servidas localmente pelos pacotes Fontsource.

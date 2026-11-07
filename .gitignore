@@ -5,6 +5,4 @@ dist/
 !.env.example
 *.local
 *.log
-.sites-runtime/
 .DS_Store
-.openai/
