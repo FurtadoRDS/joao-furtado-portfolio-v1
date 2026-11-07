@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { profile } from './content/profile';
-import { Arrow, Star } from './components/Icons';
+import { Arrow, Download, Star } from './components/Icons';
 import { Projects } from './components/Projects';
+import { Skills } from './components/Skills';
 import { ContactChannels } from './components/ContactChannels';
 import { useReveal } from './hooks/useReveal';
 
 const navigation = [
   { href: '#sobre', label: 'Sobre' },
+  { href: '#conhecimentos', label: 'Conhecimentos' },
   { href: '#experiencia', label: 'Experiência' },
   { href: '#projetos', label: 'Projetos' },
   { href: '#contato', label: 'Contato' },
@@ -51,9 +53,9 @@ function App() {
             {navigation.map((item) => <a className="nav-link" key={item.href} href={item.href} aria-current={activeSection === item.href ? 'location' : undefined}>{item.label}</a>)}
           </nav>
           <button ref={menuButtonRef} className="menu-button md:hidden" type="button" aria-expanded={menuOpen} aria-controls="mobile-menu" aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setMenuOpen(!menuOpen)}><span>{menuOpen ? 'Fechar' : 'Menu'}</span><span aria-hidden="true">{menuOpen ? '−' : '+'}</span></button>
-          <a className="header-action hidden lg:inline-flex" href={profile.links.github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
+          <a className="header-action hidden lg:inline-flex" href={profile.links.resume} download>Baixar currículo <Download /></a>
         </div>
-        {menuOpen && <nav id="mobile-menu" className="mobile-menu md:hidden" aria-label="Navegação móvel">{navigation.map((item) => <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<Arrow diagonal /></a>)}</nav>}
+        {menuOpen && <nav id="mobile-menu" className="mobile-menu md:hidden" aria-label="Navegação móvel">{navigation.map((item) => <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<Arrow diagonal /></a>)}<a href={profile.links.resume} download onClick={() => setMenuOpen(false)}>Baixar currículo<Download /></a></nav>}
       </header>
 
       <main id="conteudo">
@@ -66,8 +68,11 @@ function App() {
                 <p className="hero-greeting">Olá, eu sou</p>
                 <h1 id="hero-title">JOÃO<br />FURTADO<span>.</span></h1>
                 <p className="hero-role">DESENVOLVIMENTO.<br /><span>VONTADE DE IR ALÉM.</span></p>
-                <p className="hero-summary">Meu ponto forte é a web. Meu próximo passo é uma oportunidade para criar software e aprender em diferentes áreas.</p>
-                <a className="primary-link" href="#sobre"><span>Conheça minha trajetória</span><Arrow diagonal /></a>
+                <p className="hero-summary">Desenvolvo para a web com React, TypeScript e Laravel. Meu próximo passo é um estágio em desenvolvimento, aprendendo com um time.</p>
+                <div className="hero-actions">
+                  <a className="primary-link" href="#sobre"><span>Conheça minha trajetória</span><Arrow diagonal /></a>
+                  <a className="hero-resume-link" href={profile.links.resume} download>Baixar currículo <Download /></a>
+                </div>
               </div>
               <div ref={portraitRef} className="portrait-stage" onPointerMove={(event) => {
                 if (event.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -86,8 +91,8 @@ function App() {
               <aside className="hero-notes" aria-label="Formação e experiência atuais">
                 <Star className="mb-6 text-accent" />
                 <p className="mb-9 text-sm leading-relaxed text-muted">Entre a prática<br />de hoje e o código<br />de amanhã.</p>
-                <div className="hero-note"><strong>3º</strong><span>PERÍODO DE SISTEMAS<br />DE INFORMAÇÃO</span></div>
-                <div className="hero-note"><strong>TI</strong><span>SUPORTE NO<br />GRUPO RIO MAIS</span></div>
+                <div className="hero-note"><strong>{profile.education.graduationYear}</strong><span>FORMATURA PREVISTA EM<br />SISTEMAS DE INFORMAÇÃO</span></div>
+                <div className="hero-note"><strong>TI</strong><span>ESTÁGIO NO<br />GRUPO RIO MAIS</span></div>
               </aside>
             </div>
             <div className="hero-bottom"><span className="mono">JOÃO GUILHERME PEREIRA FURTADO</span><a href="#sobre" className="scroll-link">CONTINUE EXPLORANDO <span aria-hidden="true">↓</span></a></div>
@@ -100,14 +105,16 @@ function App() {
             <div className="flex flex-col justify-between gap-8 md:pt-14" data-reveal>
               <p className="about-lead">Quero construir software.<br /><span className="text-muted">E continuar aprendendo no caminho.</span></p>
               <p className="max-w-lg leading-relaxed text-muted">{profile.summary}</p>
-              <div className="education-row"><span className="education-index">03</span><div><p className="text-sm font-medium">{profile.education.course}</p><p className="mt-1 text-sm text-muted">{profile.education.institution} <span className="text-accent">/</span> {profile.education.period}</p></div><Star className="ml-auto shrink-0 text-accent" /></div>
+              <div className="education-row"><span className="education-index">SI</span><div><p className="text-sm font-medium">{profile.education.course}</p><p className="mt-1 text-sm text-muted">{profile.education.institution} <span className="text-accent">/</span> Formatura prevista em {profile.education.graduationYear}</p></div><Star className="ml-auto shrink-0 text-accent" /></div>
             </div>
           </div>
         </section>
 
+        <Skills />
+
         <section id="experiencia" className="section-border experience-section" aria-labelledby="experience-title">
           <div className="site-container py-16 md:py-24">
-            <div className="section-heading" data-reveal><p className="eyebrow"><span>02</span> Experiência profissional</p><h2 id="experience-title" className="section-title">Tecnologia na <em>vida real.</em></h2></div>
+            <div className="section-heading" data-reveal><p className="eyebrow"><span>03</span> Experiência profissional</p><h2 id="experience-title" className="section-title">Tecnologia na <em>vida real.</em></h2></div>
             <div className="experience-grid">
               <div className="experience-intro" data-reveal>
                 <p className="eyebrow text-accent">{profile.experience.period}</p>
@@ -120,7 +127,7 @@ function App() {
                 {profile.experience.areas.map((area, index) => (
                   <div className="experience-area" key={area.title}>
                     <h4><button type="button" aria-expanded={activeArea === index} aria-controls={`area-${index}`} onClick={() => setActiveArea(activeArea === index ? null : index)}><span className="area-number">0{index + 1}</span><span>{area.title}</span><span className="area-toggle" aria-hidden="true">{activeArea === index ? '−' : '+'}</span></button></h4>
-                    <div id={`area-${index}`} className={`area-content ${activeArea === index ? 'is-open' : ''}`} aria-hidden={activeArea !== index}><div><p>{area.description}</p>{index === 0 && <span className="tag mt-4 inline-block">Chamados / Auvo</span>}</div></div>
+                    <div id={`area-${index}`} className={`area-content ${activeArea === index ? 'is-open' : ''}`} aria-hidden={activeArea !== index}><div><p>{area.description}</p>{area.tag && <span className="tag mt-4 inline-block">{area.tag}</span>}</div></div>
                   </div>
                 ))}
               </div>
@@ -132,7 +139,7 @@ function App() {
 
         <section id="contato" className="contact-section section-border" aria-labelledby="contact-title">
           <div className="site-container relative py-16 md:py-24">
-            <p className="eyebrow" data-reveal><span>04</span> O próximo passo</p>
+            <p className="eyebrow" data-reveal><span>05</span> O próximo passo</p>
             <div className="contact-layout" data-reveal>
               <h2 id="contact-title">VAMOS<br /><em>CONVERSAR</em><span>?</span></h2>
               <div className="contact-copy"><Star className="text-accent" /><p>Busco uma oportunidade em desenvolvimento para contribuir, escrever código e aprender com novos desafios.</p><ContactChannels /></div>

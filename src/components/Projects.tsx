@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
 import { profile, projects } from '../content/profile';
-import { Arrow, Star } from './Icons';
+import { Arrow, Lock, Star } from './Icons';
 
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -52,7 +52,7 @@ export function Projects() {
     <section id="projetos" className="section-border" aria-labelledby="projects-title">
       <div className="site-container py-16 md:py-24">
         <div className="section-heading" data-reveal>
-          <p className="eyebrow"><span>03</span> O que estou construindo</p>
+          <p className="eyebrow"><span>04</span> O que estou construindo</p>
           <h2 id="projects-title" className="section-title">Código em <em>movimento.</em></h2>
         </div>
 
@@ -112,6 +112,7 @@ export function Projects() {
                   <div className="project-links">
                     {project.demo && <a className="text-link" href={project.demo} target="_blank" rel="noreferrer" aria-label={`Ver demonstração de ${project.title} (abre em nova aba)`}>Ver demonstração <Arrow diagonal /></a>}
                     {project.repository && <a className="text-link" href={project.repository} target="_blank" rel="noreferrer" aria-label={`Ver repositório de ${project.title} no GitHub (abre em nova aba)`}>Ver repositório <Arrow diagonal /></a>}
+                    {project.privacy && <p className="project-privacy"><Lock />{project.privacy}</p>}
                   </div>
                   {project.demoHint && <p className="project-demo-hint">{project.demoHint}</p>}
                 </div>
