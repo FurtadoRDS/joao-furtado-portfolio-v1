@@ -175,8 +175,8 @@ export const projects: Project[] = [
     role: 'Desenvolvimento do front-end e do back-end, a convite da empresa.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Laravel', 'PostgreSQL', 'Docker', 'GitHub Actions'],
     screenshot: '/images/projects/contract-guardian-dashboard-wide.jpg',
-    screenshotAlt: 'Dashboard do Contract Guardian com indicadores de contratos, custos e saúde da carteira, em uma conta ainda sem contratos cadastrados.',
-    screenshotCaption: 'Dashboard · conta sem contratos cadastrados',
+    screenshotAlt: 'Dashboard do Contract Guardian com 14 contratos fictícios: indicadores da carteira, gráfico de custos mensais, saúde dos contratos e lista dos mais recentes.',
+    screenshotCaption: 'Dashboard · dados fictícios',
     privacy: 'Código privado · sistema interno da empresa',
   },
   {
